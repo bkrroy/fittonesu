@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
-class FirstIntroSlider extends StatelessWidget {
+class SecondIntroSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -16,10 +16,13 @@ class FirstIntroSlider extends StatelessWidget {
             child: Image.asset('images/introBG.png'),
           ),
           Positioned(
+            top: 130,
+            right: -40,
             child: Container(
-              height: 500,
-              width: 500,
-              child: Lottie.asset('lottieAnimation/introOne.json'),
+              height: 400,
+              child: Lottie.asset(
+                'lottieAnimation/introTwo.json',
+              ),
             ),
           ),
           // This is for the yellow buttons and all
@@ -29,15 +32,15 @@ class FirstIntroSlider extends StatelessWidget {
             child: Row(
               children: [
                 CircleAvatar(
-                  radius: 9,
-                  backgroundColor: Color(0xFFFFD12F),
+                  radius: 6,
+                  backgroundColor: Color(0xFFD11818),
                 ),
                 SizedBox(
                   width: 10,
                 ),
                 CircleAvatar(
-                  radius: 6,
-                  backgroundColor: Color(0xFFD11818),
+                  radius: 9,
+                  backgroundColor: Color(0xFFFFD12F),
                 ),
                 SizedBox(
                   width: 10,
@@ -60,25 +63,26 @@ class FirstIntroSlider extends StatelessWidget {
                   width: 180,
                   height: 33,
                   child: Text(
-                    'Stay Healthy',
+                    'Stay Safe',
                     style: GoogleFonts.raleway(
                       fontSize: 28.0,
                       fontWeight: FontWeight.bold,
                     ),
-                      textAlign: TextAlign.center,
+                    textAlign: TextAlign.center,
                   ),
                 ),
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 Container(
                   height: 28,
                   width: 229,
                   child: Text(
-                    'Control on what goes inside',
+                    'Keeping your body healthy is an expression of gratitude',
                     style: GoogleFonts.raleway(
-                      fontSize: 12.0,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF867F7F)
-                    ),
+                        fontSize: 12.0,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF867F7F)),
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -87,7 +91,7 @@ class FirstIntroSlider extends StatelessWidget {
           ),
           Positioned(
             bottom: 30,
-            left: MediaQuery.of(context).size.width*0.35,
+            left: MediaQuery.of(context).size.width * 0.35,
             child: Container(
               height: 45.25,
               width: 118,
