@@ -16,10 +16,10 @@ class SecondIntroSlider extends StatelessWidget {
           Container(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
-            child: Image.asset('images/introBG.png'),
+            child: Image.asset('images/introBG.png', fit: BoxFit.fitWidth,),
           ),
           Positioned(
-            top: 130,
+            top: 100,
             right: -40,
             child: Container(
               height: 400,
@@ -30,7 +30,7 @@ class SecondIntroSlider extends StatelessWidget {
           ),
           // This is for the yellow buttons and all
           Positioned(
-            bottom: 220,
+            top: MediaQuery.of(context).size.height*0.69,
             left: MediaQuery.of(context).size.width * 0.4,
             child: Row(
               children: [

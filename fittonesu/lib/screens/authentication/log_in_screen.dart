@@ -6,9 +6,8 @@ import 'package:fittonesu/screens/userScreens/user_home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-class SignUp extends StatelessWidget {
-
-  static const id = 'sign_up';
+class LogInScreen extends StatelessWidget {
+  static const id = 'log_in_screen';
 
   @override
   Widget build(BuildContext context) {
@@ -23,19 +22,19 @@ class SignUp extends StatelessWidget {
             width: screenWidth,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Lottie.asset('lottieAnimation/authScreen.json'),
-                InputTextWidget(hintText: 'Name'),
-                SizedBox(height: 20,),
-                InputTextWidget(hintText: 'Email Id',),
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: screenHeight*0.03,
+                ),
+                InputTextWidget(
+                  hintText: 'Email Id',
+                ),
+                SizedBox(height: 30,),
                 InputPasswordTextWidget(hintText: 'Password'),
-                SizedBox(height: 20,),
-                InputTextWidget(hintText: 'Age'),
-                SizedBox(height: 20,),
-                InputTextWidget(hintText: 'Sex'),
-                SizedBox(height: 20,),
-                RedButtonWidget(navigatorText: UserHomeScreen.id, buttonText: 'Sign Up',)
+                SizedBox(height: 30,),
+                RedButtonWidget(navigatorText: UserHomeScreen.id, buttonText: 'Sing In',)
               ],
             ),
           ),
@@ -44,3 +43,8 @@ class SignUp extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
