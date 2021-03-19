@@ -1,9 +1,11 @@
 import 'package:fittonesu/constant.dart';
+import 'package:fittonesu/screens/authentication/intermediate_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
 class ThirdIntroScreen extends StatelessWidget {
+  static const id = 'third_intro_slider';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,22 +33,22 @@ class ThirdIntroScreen extends StatelessWidget {
           child: Row(
             children: [
               CircleAvatar(
+                radius: 6,
+                backgroundColor: Color(0xFFD11818),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              CircleAvatar(
+                radius: 6,
+                backgroundColor: Color(0xFFD11818),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              CircleAvatar(
                 radius: 9,
                 backgroundColor: Color(0xFFFFD12F),
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              CircleAvatar(
-                radius: 6,
-                backgroundColor: Color(0xFFD11818),
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              CircleAvatar(
-                radius: 6,
-                backgroundColor: Color(0xFFD11818),
               ),
             ],
           ),
@@ -91,19 +93,24 @@ class ThirdIntroScreen extends StatelessWidget {
         Positioned(
           bottom: 30,
           left: MediaQuery.of(context).size.width * 0.29,
-          child: Container(
-            height: 45.25,
-            width: 170,
-            decoration: BoxDecoration(
-              color: kRedButtonColor,
-              borderRadius: BorderRadius.circular(24),
-            ),
-            child: Center(
-              child: Text(
-                'Get Started',
-                style: GoogleFonts.raleway(
-                  fontSize: 23.0,
-                  fontWeight: FontWeight.bold,
+          child: GestureDetector(
+            onTap: (){
+              Navigator.pushNamedAndRemoveUntil(context, InterMediateScreen.id, (Route<dynamic>route) => false);
+            },
+            child: Container(
+              height: 45.25,
+              width: 170,
+              decoration: BoxDecoration(
+                color: kRedButtonColor,
+                borderRadius: BorderRadius.circular(24),
+              ),
+              child: Center(
+                child: Text(
+                  'Get Started',
+                  style: GoogleFonts.raleway(
+                    fontSize: 23.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),

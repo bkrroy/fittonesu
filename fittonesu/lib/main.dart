@@ -1,3 +1,5 @@
+import 'package:fittonesu/screens/authentication/intermediate_screen.dart';
+import 'package:fittonesu/screens/authentication/sign_up_screen.dart';
 import 'package:fittonesu/screens/first_intro_slider.dart';
 import 'package:fittonesu/screens/second_intro_slider.dart';
 import 'package:fittonesu/screens/third_intro_slider.dart';
@@ -22,7 +24,15 @@ class _MyAppState extends State<MyApp> {
         primaryColor: Colors.amber,
       ),
       themeMode: ThemeMode.dark,
-      home: ThirdIntroScreen(),//SecondIntroSlider(),//FirstIntroSlider(),
+      initialRoute: FirstIntroSlider.id,
+      routes: {
+        FirstIntroSlider.id: (context) => FirstIntroSlider(),
+        SecondIntroSlider.id: (context) => SecondIntroSlider(),
+        ThirdIntroScreen.id: (context) => ThirdIntroScreen(),
+        InterMediateScreen.id: (context) => InterMediateScreen(),
+        SignUp.id: (context) => SignUp(),
+      },
+      home: FirstIntroSlider(),
     );
   }
 }

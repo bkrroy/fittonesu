@@ -1,9 +1,12 @@
 import 'package:fittonesu/constant.dart';
+import 'package:fittonesu/screens/third_intro_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
 class SecondIntroSlider extends StatelessWidget {
+  static const id = 'second_intro_slider';
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -92,19 +95,24 @@ class SecondIntroSlider extends StatelessWidget {
           Positioned(
             bottom: 30,
             left: MediaQuery.of(context).size.width * 0.35,
-            child: Container(
-              height: 45.25,
-              width: 118,
-              decoration: BoxDecoration(
-                color: kRedButtonColor,
-                borderRadius: BorderRadius.circular(24),
-              ),
-              child: Center(
-                child: Text(
-                  'Skip',
-                  style: GoogleFonts.raleway(
-                    fontSize: 23.0,
-                    fontWeight: FontWeight.bold,
+            child: GestureDetector(
+              onTap: (){
+                Navigator.pushNamedAndRemoveUntil(context, ThirdIntroScreen.id, (Route<dynamic>route) => false);
+              },
+              child: Container(
+                height: 45.25,
+                width: 118,
+                decoration: BoxDecoration(
+                  color: kRedButtonColor,
+                  borderRadius: BorderRadius.circular(24),
+                ),
+                child: Center(
+                  child: Text(
+                    'Next',
+                    style: GoogleFonts.raleway(
+                      fontSize: 23.0,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
