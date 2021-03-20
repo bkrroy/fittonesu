@@ -32,6 +32,9 @@ dependencies:
   google_fonts: ^2.0.0
   geolocator: ^7.0.1
   fl_chart: ^0.20.1
+  chewie: ^1.0.0
+  video_player: ^2.0.2
+  url_launcher: ^6.0.2
 
 dev_dependencies:
   flutter_test:

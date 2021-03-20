@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class TwoProductDisplayWidget extends StatelessWidget {
   TwoProductDisplayWidget({
@@ -11,6 +12,8 @@ class TwoProductDisplayWidget extends StatelessWidget {
     this.rightProductName,
     this.leftPrice,
     this.rightPrice,
+    this.leftURL,
+    this.rightURL,
   });
 
   final String leftImagePath;
@@ -21,6 +24,8 @@ class TwoProductDisplayWidget extends StatelessWidget {
   final String rightProductName;
   final String leftPrice;
   final String rightPrice;
+  final String leftURL;
+  final String rightURL;
 
   String backgroundPathLeft() {
     if (leftId == '0') {
@@ -46,125 +51,141 @@ class TwoProductDisplayWidget extends StatelessWidget {
     }
   }
 
+  void _launchURLLeft() async =>
+      await canLaunch(leftURL) ? await launch(leftURL) : throw 'Could not launch $leftURL';
+
+  void _launchURLRight() async =>
+      await canLaunch(rightURL) ? await launch(rightURL) : throw 'Could not launch $rightURL';
+
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Container(
-          height: 160,
-          width: 160,
-          child: Center(
-            child: Stack(
-              children: [
-                backgroundPathLeft() != '0'
-                    ? Image.asset(
-                        backgroundPathLeft(),
-                        fit: BoxFit.cover,
-                      )
-                    : Container(),
-                Center(
-                  child: Container(
-                    height: 140,
-                    width: 140,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          height: 58,
-                          width: 58,
-                          child: Image.asset(
-                            leftImagePath,
-                          ),
-                        ),
-                        Container(
-                          height: 20,
-                          child: Text(
-                            leftProductName,
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.raleway(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16.0,
+        GestureDetector(
+          onTap: (){
+            _launchURLLeft();
+          },
+          child: Container(
+            height: 160,
+            width: 160,
+            child: Center(
+              child: Stack(
+                children: [
+                  backgroundPathLeft() != '0'
+                      ? Image.asset(
+                          backgroundPathLeft(),
+                          fit: BoxFit.cover,
+                        )
+                      : Container(),
+                  Center(
+                    child: Container(
+                      height: 140,
+                      width: 140,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 58,
+                            width: 58,
+                            child: Image.asset(
+                              leftImagePath,
                             ),
                           ),
-                        ),
-                        Container(
-                          height: 14,
-                          child: Text(
-                            leftPrice,
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.raleway(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
+                          Container(
+                            height: 20,
+                            child: Text(
+                              leftProductName,
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.raleway(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16.0,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                          Container(
+                            height: 14,
+                            child: Text(
+                              leftPrice,
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.raleway(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
-        Container(
-          height: 160,
-          width: 160,
-          child: Center(
-            child: Stack(children: [
-              backgroundPathRight() != '0'
-                  ? Image.asset(
-                      backgroundPathRight(),
-                      fit: BoxFit.cover,
-                    )
-                  : Container(),
-              Container(
-                height: 140,
-                width: 140,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      height: 58,
-                      width: 58,
-                      child: Image.asset(
-                        rightImagePath,
-                      ),
-                    ),
-                    Container(
-                      child: Text(
-                        rightProductName,
-                        style: GoogleFonts.raleway(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16.0,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    Container(
-                      child: Text(
-                        rightPrice,
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.raleway(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
+        GestureDetector(
+          onTap: (){
+            _launchURLRight();
+          },
+          child: Container(
+            height: 160,
+            width: 160,
+            child: Center(
+              child: Stack(children: [
+                backgroundPathRight() != '0'
+                    ? Image.asset(
+                        backgroundPathRight(),
+                        fit: BoxFit.cover,
+                      )
+                    : Container(),
+                Container(
+                  height: 140,
+                  width: 140,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 58,
+                        width: 58,
+                        child: Image.asset(
+                          rightImagePath,
                         ),
                       ),
-                    ),
-                  ],
+                      Container(
+                        child: Text(
+                          rightProductName,
+                          style: GoogleFonts.raleway(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16.0,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      Container(
+                        child: Text(
+                          rightPrice,
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.raleway(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ]),
+              ]),
+            ),
           ),
         ),
       ],
