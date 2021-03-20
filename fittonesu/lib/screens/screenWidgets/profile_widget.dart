@@ -79,11 +79,17 @@ class ProfileWidget extends StatelessWidget {
               SizedBox(
                 height: inBetweenTextHeight,
               ),
-              MyActivityWidget(),
+              MyActivityWidget(
+                activity: 'Waling/Running',
+                achievement: '10 km',
+              ),
               SizedBox(
                 height: inBetweenTextHeight,
               ),
-              MyActivityWidget(),
+              MyActivityWidget(
+                activity: 'Swimming',
+                achievement: '1 hour',
+              ),
               SizedBox(
                 height: inBetweenTextHeight,
               ),
@@ -141,6 +147,15 @@ class ProfileWidget extends StatelessWidget {
 
 /// This widget is used to track the activity
 class MyActivityWidget extends StatelessWidget {
+
+  MyActivityWidget({
+    this.activity,
+    this.achievement
+});
+
+  final String activity;
+  final String achievement;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -156,11 +171,11 @@ class MyActivityWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Walking/Running',
+              activity,
               style: GoogleFonts.raleway(fontSize: 16.0),
             ),
             Text(
-              '10 km',
+              achievement,
               style: GoogleFonts.raleway(fontSize: 16.0),
             )
           ],

@@ -47,7 +47,7 @@ class _UserHomeScreenState extends State<UserHomeScreen> {
                   height: 30,
                   width: 30,
                   child: ImageIcon(
-                    AssetImage('images/homeIcon.png'),
+                    AssetImage('images/hutHomeIcon.png'),
                   ),
                 ),
                 label: 'Home',

@@ -46,18 +46,24 @@ class _InstructorWidgetState extends State<InstructorWidget> {
               ),
               InstructorPostWidget(
                 videoUrl: url1,
+                userName: 'walkInTheCraziestWay',
+                userCaption: 'The way you practice the meditation now is the way you live peacefully',
               ),
               SizedBox(
                 height: sizedBoxHeight,
               ),
               InstructorPostWidget(
                 videoUrl: url2,
+                userCaption: 'The Thing about exercise is it keeps you and your mind healthy',
+                userName: 'V A T S A L A S T A V',
               ),
               SizedBox(
                 height: sizedBoxHeight,
               ),
               InstructorPostWidget(
                 videoUrl: url3,
+                userName: 'KhatroKeKhiladi',
+                userCaption: 'This world and the Size dosen\'t matter all it matters is that you are willing to do it',
               ),
               SizedBox(
                 height: sizedBoxHeight,
@@ -71,9 +77,11 @@ class _InstructorWidgetState extends State<InstructorWidget> {
 }
 
 class InstructorPostWidget extends StatefulWidget {
-  InstructorPostWidget({this.videoUrl});
+  InstructorPostWidget({this.videoUrl, this.userName, this.userCaption});
 
   final String videoUrl;
+  final String userName;
+  final String userCaption;
 
   @override
   _InstructorPostWidgetState createState() => _InstructorPostWidgetState();
@@ -111,7 +119,7 @@ class _InstructorPostWidgetState extends State<InstructorPostWidget> {
             padding: const EdgeInsets.only(left: 10),
             child: Container(
               child: Text(
-                'vatsalVerma',
+                widget.userName,
                 style: GoogleFonts.raleway(
                     fontWeight: FontWeight.bold, fontSize: 20.0),
               ),
@@ -132,7 +140,7 @@ class _InstructorPostWidgetState extends State<InstructorPostWidget> {
             padding: const EdgeInsets.only(left: 10),
             child: Container(
               child: Text(
-                'A fitness App for All your needs and anything that you need for today',
+                widget.userCaption,
                 style: GoogleFonts.raleway(),
               ),
             ),

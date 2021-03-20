@@ -54,19 +54,27 @@ class HomePageWidget extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 30, right: 30),
                   child: Column(
                     children: [
-                      HomePostWidget(),
+                      HomePostWidget(
+                        userCaption: 'Just Practice Hard Enough to be part of the unknown',
+                        userName: 'V A T S A L A S T A V',
+                        lottiePath: 'lottieAnimation/lunge.json',
+                      ),
                       SizedBox(
                         height: sizedBoxHeight,
                       ),
-                      HomePostWidget(),
+                      HomePostWidget(
+                        userName: 'unknownPathWalker',
+                        userCaption: 'The walk till eternity is the walk of life',
+                        lottiePath: 'lottieAnimation/crunches.json',
+                      ),
                       SizedBox(
                         height: sizedBoxHeight,
                       ),
-                      HomePostWidget(),
-                      SizedBox(
-                        height: sizedBoxHeight,
+                      HomePostWidget(
+                        userName: 'TheToughGuy',
+                        userCaption: 'It is better to have some motivation everyday than to have none',
+                        lottiePath: 'lottieAnimation/inchWorm.json',
                       ),
-                      HomePostWidget(),
                       SizedBox(
                         height: sizedBoxHeight,
                       ),
@@ -83,6 +91,13 @@ class HomePageWidget extends StatelessWidget {
 }
 
 class HomePostWidget extends StatelessWidget {
+
+  HomePostWidget({this.userName, this.userCaption, this.lottiePath});
+
+  final String userName;
+  final String userCaption;
+  final String lottiePath;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -100,7 +115,7 @@ class HomePostWidget extends StatelessWidget {
             padding: const EdgeInsets.only(left: 10),
             child: Container(
               child: Text(
-                'vatsalVerma',
+                userName,
                 style: GoogleFonts.raleway(
                     fontWeight: FontWeight.bold, fontSize: 20.0),
               ),
@@ -112,7 +127,7 @@ class HomePostWidget extends StatelessWidget {
           Container(
             height: 202,
             width: 358,
-            child: Lottie.asset('lottieAnimation/authScreen.json'),
+            child: Lottie.asset(lottiePath, fit: BoxFit.fill),
           ),
           SizedBox(
             height: 5,
@@ -121,7 +136,7 @@ class HomePostWidget extends StatelessWidget {
             padding: const EdgeInsets.only(left: 10),
             child: Container(
               child: Text(
-                'Just Meditate your way through your life',
+                userCaption,
                 style: GoogleFonts.raleway(),
               ),
             ),
