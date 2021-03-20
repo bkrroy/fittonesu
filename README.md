@@ -1,19 +1,19 @@
 <p align="center">
 	<h2 align="center"> Fittonesu </h2>
-  <h3 align="center">Theme:  Open Innovation </h3>
-	<h4 align="center"> It is a platform for women to promote their small-scale business, helping them with all the legal formalities and Government based schemes that they can apply for , It is an user friendly so that everyone can set up their business easily  <h4>
+  <h3 align="center">Theme:  Health care and social responsibility </h3>
+	<h4 align="center"> Our application AIMS at connecting people so that each of them can see the progress of friends while being at home being safe and finally with all this motivation being fit initially the user will have to sign up or if you already have an account login in vice meaning of we as first name email username password age and sex  <h4>
 </p>
 
 ---
-# This is for the Seller Side
 ## Functionalities
+- [✔]  Intro Slider Screens
 - [✔]  Admin Authentication (Login and SignUp)
-- [✔]  For first time user setting up their Business (All their information is collected)
-- [✔]  When Logged In they can check their daily analytics of the products sold
-- [✔]  Add new product
-- [✔]  See their daily sales
-- [✔]  Check their info
-- [✔]  Invest in different new investing opportunities
+- [✔]  For first time users (All their information is collected)
+- [✔]  In the profile section you get information about yourself and all the calories you have burned
+- [✔]  At the Home Page search through various different exercies that you can perform
+- [✔]  Watch Videos of Instructors
+- [✔]  Check their friends daily workout Sessions
+- [✔]  Go to Store and buy new things
 - [✔]  Log Out Admin
 <br>
 
@@ -72,18 +72,29 @@ Vatsal Verma
 </td>
 
 <td>
-Anannya Popat 
+Arya Patel 
 <p align="center">
-<a href = "https://github.com/Anannyap7"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36" alt="GitHub"/></a>
-<a href = "https://www.linkedin.com/in/anannya-popat-4bba3319a/">
+<a href = "https://github.com/AryaPatel1111"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36" alt="GitHub"/></a>
+<a href = "https://www.linkedin.com/in/arya-patel-1111cm/">
 <img src = "http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width="36" height="36" alt="LinkedIn"/>
 </a>
 </p>
 </td>
+
+<td>
+Pratham Shah
+<p align="center">
+<a href = "https://github.com/Pratham-Shah"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36" alt="GitHub"/></a>
+<a href = "https://www.linkedin.com/in/pratham-shah-627b4619a/">
+<img src = "http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width="36" height="36" alt="LinkedIn"/>
+</a>
+</p>
+</td>
+
 </tr>
 </table>
 
 <p align="center">
-	Made with :heart: by lul
+	Made with :heart: by Cyb3rm0nks
 </p>
 
