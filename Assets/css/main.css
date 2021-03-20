@@ -1,0 +1,117 @@
+body {
+  background-color: #000022;
+  color: #ffffff;
+}
+.navbar {
+  width: 100%;
+  z-index: 2;
+  background-color: #363653;
+  font-size: 18px;
+}
+.navbar-brand img {
+  width: 55px;
+  height: 55px;
+}
+.navbar .container-fluid {
+  padding-right: 5vw;
+}
+.fittonesu img {
+  width: 20px;
+  height: 20px;
+}
+.nav-item {
+  margin-left: 2vw;
+}
+.navbar.scrolled {
+  background-color: #363653 !important;
+  transition: background-color 200ms linear;
+}
+
+.intro-wrapper {
+  position: relative;
+  top: 5rem;
+}
+.aboutus-wrapper {
+  position: relative;
+  top: 30rem;
+  text-align: center;
+}
+.workout-wrapper {
+  position: relative;
+  top: 45rem;
+  text-align: center;
+}
+.videos-wrapper {
+  position: relative;
+  top: 50rem;
+  text-align: center;
+}
+.shop-wrapper {
+  position: relative;
+  top: 55rem;
+  text-align: center;
+}
+
+.footer-wrapper {
+  position: relative;
+  top: 60rem;
+  text-align: center;
+  background-color: #363653;
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+.footer-brand {
+  margin-right: 400px;
+  margin-top: -15px;
+}
+
+.social {
+  margin-top: -15px;
+}
+
+.downloadable {
+  margin-left: 200px;
+  margin-top: -15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open-Sans", sans-serif;
+  font-weight: 500;
+}
+.intro-phone {
+  justify-content: right;
+  text-align: right;
+  align-items: right;
+}
+.intro-content {
+  justify-content: center;
+  align-self: flex-end;
+}
+
+a {
+  text-decoration: none !important;
+  outline: none;
+}
+
+.animation {
+  text-align: center;
+}
+
+.bg-dark {
+  background-color: #363653;
+}
+
+@media (max-width: 600px) {
+  .navbar .container-fluid {
+    padding-right: 0vw;
+  }
+}

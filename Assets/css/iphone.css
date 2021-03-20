@@ -1,0 +1,114 @@
+.outside {
+  background-color: #a6a6a6;
+  width: 300px;
+  height: 600px;
+  border-radius: 40px;
+  z-index: -1;
+  position: absolute;
+}
+.inside {
+  box-sizing: border-box;
+  background-color: #000022;
+  width: 290px;
+  height: 590px;
+  margin-left: 5px;
+  margin-top: 5px;
+  border-left: solid 3px black;
+  border-right: solid 3px black;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+  border-radius: 35px;
+}
+.header {
+  background-color: black;
+  width: 150px;
+  height: 25px;
+  border-radius: 00px 0px 20px 20px;
+  margin-left: 70px;
+  margin-top: 0px;
+  overflow-x: hidden;
+}
+.button1 {
+  background-color: #696969;
+  width: 5px;
+  height: 25px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  margin-left: -10px;
+}
+.button2,
+.button3 {
+  background-color: #696969;
+  width: 5px;
+  height: 50px;
+  margin-bottom: 10px;
+  margin-left: -10px;
+}
+.button4 {
+  background-color: #696969;
+  width: 5px;
+  height: 80px;
+  float: right;
+  margin-top: -100px;
+  margin-right: -10px;
+}
+.camera {
+  @extend %center-horizontal;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid;
+  border-top-color: #1e1e1e;
+  border-left-color: #262626;
+  border-right-color: #1e1e1e;
+  border-bottom-color: #262626;
+  position: relative;
+  top: 5px;
+  left: 100px;
+  &:before,
+  &:after {
+    @extend %sudos;
+    @extend %center-all;
+    border-radius: 50%;
+  }
+  // Gradient layer on top of background
+  &:before {
+    width: 12px;
+    height: 12px;
+    background: -webkit-linear-gradient(top, #0f0f0f, #1f1f1f);
+    background: -o-linear-gradient(bottom, #0f0f0f, #1f1f1f);
+    background: -moz-linear-gradient(bottom, #0f0f0f, #1f1f1f);
+    background: linear-gradient(to bottom, #0f0f0f, #1f1f1f);
+  }
+  // Inside Border
+  &:after {
+    width: 6px;
+    height: 6px;
+    border: 2px solid #2a2a2a;
+    background: $iphone-black;
+  }
+}
+.speaker {
+  @extend %absolute;
+  bottom: 0px;
+  width: 53px;
+  height: 8px;
+  background: #2a2a2a;
+  border-radius: 10px;
+  z-index: 10;
+  position: relative;
+  top: -5px;
+  left: 40px;
+  &:after {
+    @extend %sudos;
+    @extend %center-horizontal;
+    width: 54px;
+    height: 12px;
+    border: 3px solid;
+    border-top-color: #181818;
+    border-left-color: #181818;
+    border-right-color: #111;
+    border-bottom-color: #1e1e1e;
+    border-radius: 10px;
+  }
+}
