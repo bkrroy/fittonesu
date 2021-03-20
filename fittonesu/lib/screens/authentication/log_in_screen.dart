@@ -34,7 +34,7 @@ class LogInScreen extends StatelessWidget {
                 SizedBox(height: 30,),
                 InputPasswordTextWidget(hintText: 'Password'),
                 SizedBox(height: 30,),
-                RedButtonWidget(navigatorText: UserHomeScreen.id, buttonText: 'Sing In',)
+                RedButtonWidget(navigatorText: UserHomeScreen.id, buttonText: 'Sign In',)
               ],
             ),
           ),
