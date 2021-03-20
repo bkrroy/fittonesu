@@ -25,7 +25,7 @@ class SignUp extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Lottie.asset('lottieAnimation/authScreen.json'),
-                InputTextWidget(hintText: 'Name'),
+                InputTextWidget(hintText: 'Username'),
                 SizedBox(height: 20,),
                 InputTextWidget(hintText: 'Email Id',),
                 SizedBox(height: 20,),
@@ -35,7 +35,8 @@ class SignUp extends StatelessWidget {
                 SizedBox(height: 20,),
                 InputTextWidget(hintText: 'Sex'),
                 SizedBox(height: 20,),
-                RedButtonWidget(navigatorText: UserHomeScreen.id, buttonText: 'Sign Up',)
+                RedButtonWidget(navigatorText: UserHomeScreen.id, buttonText: 'Sign Up',),
+                SizedBox(height: 20,),
               ],
             ),
           ),
