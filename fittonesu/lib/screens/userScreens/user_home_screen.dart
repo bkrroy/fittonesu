@@ -1,4 +1,7 @@
 import 'package:fittonesu/constant.dart';
+import 'package:fittonesu/screens/screenWidgets/insturctor_widget.dart';
+import 'package:fittonesu/screens/screenWidgets/profile_widget.dart';
+import 'package:fittonesu/screens/screenWidgets/sports_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,10 +17,10 @@ class _UserHomeScreenState extends State<UserHomeScreen> {
 
   List<Widget> _widgetOptions = <Widget>[
     Container(),
+    InstructorWidget(),
     Container(),
-    Container(),
-    Container(),
-    Container(),
+    SportsWidget(),
+    ProfileWidget(),
   ];
 
   void _onItemTapped(int index) {
@@ -28,66 +31,68 @@ class _UserHomeScreenState extends State<UserHomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: kBackgroundColor,
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: SizedBox(
-              height: 30,
-              width: 30,
-              child: ImageIcon(
-                AssetImage('images/homeIcon.png'),
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: kBackgroundColor,
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: SizedBox(
+                height: 30,
+                width: 30,
+                child: ImageIcon(
+                  AssetImage('images/homeIcon.png'),
+                ),
               ),
+              label: 'Home',
             ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: SizedBox(
-              height: 30,
-              width: 30,
-              child: ImageIcon(
-                AssetImage('images/instructorIcon.png'),
+            BottomNavigationBarItem(
+              icon: SizedBox(
+                height: 30,
+                width: 30,
+                child: ImageIcon(
+                  AssetImage('images/instructorIcon.png'),
+                ),
               ),
+              label: 'Instructor',
             ),
-            label: 'Instructor',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.add_circle,
-              size: 30,
-            ),
-            label: 'Add',
-          ),
-          BottomNavigationBarItem(
-            icon: SizedBox(
-              height: 30,
-              width: 30,
-              child: ImageIcon(
-                AssetImage('images/sports.png'),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.add_circle,
+                size: 30,
               ),
+              label: 'Add',
             ),
-            label: 'sports',
-          ),
-          BottomNavigationBarItem(
-            icon: SizedBox(
-              height: 30,
-              width: 30,
-              child: ImageIcon(
-                AssetImage('images/profile.png'),
+            BottomNavigationBarItem(
+              icon: SizedBox(
+                height: 30,
+                width: 30,
+                child: ImageIcon(
+                  AssetImage('images/sports.png'),
+                ),
               ),
+              label: 'sports',
             ),
-            label: 'profile',
+            BottomNavigationBarItem(
+              icon: SizedBox(
+                height: 30,
+                width: 30,
+                child: ImageIcon(
+                  AssetImage('images/profile.png'),
+                ),
+              ),
+              label: 'profile',
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          unselectedItemColor: Colors.white,
+          selectedItemColor: kRedButtonColor,
+          onTap: _onItemTapped,
+        ),
+        body: Container(
+          child: Center(
+            child: _widgetOptions.elementAt(_selectedIndex),
           ),
-        ],
-        currentIndex: _selectedIndex,
-        unselectedItemColor: Colors.white,
-        selectedItemColor: kRedButtonColor,
-        onTap: _onItemTapped,
-      ),
-      body: Container(
-        child: Center(
-          child: _widgetOptions.elementAt(_selectedIndex),
         ),
       ),
     );

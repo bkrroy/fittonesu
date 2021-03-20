@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
         primaryColor: Colors.amber,
       ),
       themeMode: ThemeMode.dark,
-      initialRoute: FirstIntroSlider.id,
+      initialRoute: UserHomeScreen.id,//FirstIntroSlider.id,
       routes: {
         FirstIntroSlider.id: (context) => FirstIntroSlider(),
         SecondIntroSlider.id: (context) => SecondIntroSlider(),
