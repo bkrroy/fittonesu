@@ -28,6 +28,11 @@
   margin-top: 0px;
   overflow-x: hidden;
 }
+.phony {
+  position: absolute;
+  top: 5rem;
+  right: 2.6rem;
+}
 .button1 {
   background-color: #696969;
   width: 5px;
