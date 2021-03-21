@@ -5,12 +5,29 @@ import 'package:fittonesu/constant.dart';
 import 'package:fittonesu/screens/userScreens/user_home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:provider/provider.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-class LogInScreen extends StatelessWidget {
+class LogInScreen extends StatefulWidget {
   static const id = 'log_in_screen';
 
   @override
+  _LogInScreenState createState() => _LogInScreenState();
+}
+
+class _LogInScreenState extends State<LogInScreen> {
+
+  String emailId;
+  String password;
+
+  @override
   Widget build(BuildContext context) {
+    final firebaseUer = context.read<User>();
+
+    if(firebaseUer != null){
+      return UserHomeScreen();
+    }
+
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
     return SafeArea(

@@ -13,8 +13,8 @@ class RedButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.pushNamed(context, navigatorText);
-        //Navigator.pushNamedAndRemoveUntil(context, navigatorText, (Route<dynamic>route) => false);
+        //Navigator.pushNamed(context, navigatorText);
+        Navigator.pushNamedAndRemoveUntil(context, navigatorText, (Route<dynamic>route) => false);
       },
       child: Container(
         height: 45,
