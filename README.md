@@ -2,6 +2,7 @@
 	<h2 align="center"> Fittonesu </h2>
   <h3 align="center">Theme:  Health care and social responsibility </h3>
 	<h4 align="center">Fittonesu is an application which takes fitness app to heights unscaled. We aim at connecting friends with each other via one app which motivates them all to workout more and stay fit and healthy. A user can see their friends' workouts (colories burnt, steps taken, etc). We also provide an option for gym instructors or yoga or zumba instructors to post videos for people to learn and refer to. Top sports items deals from Amazon are also featured in our shop page. The profile page shows the personal info and a graph of daily workout stats. We will also provide an option to connect smart devices for more activities tracking.  <h4>
+	<h3> Website Link : https://aryapatel1111.github.io/Fittonesu/ </h3>
 </p>
 
 ---
